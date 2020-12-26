@@ -1,0 +1,374 @@
+    1  pwd
+    2  vi text.yxy
+    3  man
+    4  man --help
+    5  bash
+    6  uname
+    7  uname -a
+    8  hostname
+    9  ff
+   10  pip
+   11  pip install ff
+   12  ff
+   13  pip install man
+   14  man
+   15  ls
+   16  pwd
+   17  py
+   18  x="hi"
+   19  echo x
+   20  read -p x
+   21  echo x
+   22  read -p $y
+   23  read -p y
+   24  echo y
+   25  read --help
+   26  x="hiya"
+   27  echo $x
+   28  echo x
+   29  echo $y
+   30  eco ${x}
+   31  echo ${x}
+   32  echo ${x/h/z}
+   33  echo ${x}
+   34  len=2
+   35  echo ${x:0:len}
+   36  echo ${x:0:3}
+   37  echo ${x: -2}
+   38  echo ${#x}
+   39  echo ${x:-"yeah"}
+   40  x=''
+   41  echo ${x:-"yeah"}
+   42  list=(one two three four five)
+   43  echo ${list}
+   44  echo ${list[1]}
+   45  echo ${list[@]}
+   46  echo ${#list[@]}
+   47  echo ${#list[1]}
+   48  echo ${list[@]:2}
+   49  echo ${list[@]:3}
+   50  echo ${list[@]:0}
+   51  echo ${list[@]:1}
+   52  echo ${list[@]:3:1}
+   53  echo ${list[@]:3:13}
+   54  echo ${list[@]:3:3}
+   55  echo ${list[@]:3:-1}
+   56  echo ${list[@]:3:1}
+   57  for i in "${list[@]}"; do echo "$i"; done
+   58  echo {1..10}
+   59  echo {1.10}
+   60  echo {1...10}
+   61  echo {1..100}
+   62  echo {90..909}
+   63  clear
+   64  echo {90..909}
+   65  list1= echo {3..19}
+   66  echo ${list[@]}
+   67  echo ${list1[@]}
+   68  list1#
+   69  list1
+   70  echo $list1
+   71  echo {a..qa}
+   72  echo {a..q}
+   73  $?
+   74  echo $?
+   75  echo $0
+   76  env
+   77  env --help
+   78  echo "last prog return value: $?"
+   79  echo 1+3
+   80  a=1+3
+   81  echo $a
+   82  echo "Scripts PID: $$"
+   83  ps
+   84  echo "num args: $#"
+   85  echo "args: $1 $2..."
+   86  echo "args: $1 $2"
+   87  echo "I am in $(pwd)"
+   88  echo "I am in $(ls)"
+   89  echo "I am in $PWD"
+   90  echo "I am in $PWD"var
+   91  vaR
+   92  VAR
+   93  var
+   94  cls
+   95  cl
+   96  clear
+   97  echo "Who are you?"
+   98  read name
+   99  echo "hello $name"
+  100  echo $USER
+  101  echo "$USER"
+  102  $USER
+  103  env
+  104  echo "$USERNAME"
+  105  if ["$name" != "$USERNAME"]; then echo "you're not the user $USERNAME"; else echo "you are the user"; fi
+  106  echo $name
+  107  if [$name != "$USERNAME"]; then echo "you're not the user $USERNAME"; else echo "you are the user"; fi
+  108  if [ $name != $USERNAME ]; then echo "you're not the user $USERNAME"; else echo "you are the user"; fi
+  109  echo "always executed" || echo "Maybe executed"
+  110  echo "always executed" & echo "Maybe executed"
+  111  echo "always executed" && echo "Maybe executed"
+  112  age=20
+  113  if [ $name == "Jenkins" ]  && [ $age -eq 20 ] ; then echo "happy days its you"; else echo "not good"; fi
+  114  email=sexy@yahoo.com
+  115  if [[ $email =~ [a-z]+@[a-z]\.(com|net|org) ]]; then echo "valid email"; else echo "not valid"; fi
+  116  echo $email
+  117  if [[ $email =~ [a-z]+@[a-z]{2,}\.(com|net|org) ]]; then echo "valid email"; else echo "not valid"; fi
+  118  email=teyr898@yeue.org
+  119  if [[ $email =~ [a-z]+@[a-z]{2,}\.(com|net|org) ]]; then echo "valid email"; else echo "not valid"; fi
+  120  if [[ $email =~ [a-z|0-9]+@[a-z]{2,}\.(com|net|org) ]]; then echo "valid email"; else echo "not valid"; fi
+  121  alias -p
+  122  ll
+  123  ls
+  124  echo $(( 10 + 8 ))
+  125  ls -lrt
+  126  echo -e "START OF FILE\n$Contents\nEND OF FILE"
+  127  echo  "START OF FILE\n$Contents\nEND OF FILE"
+  128  echo --help
+  129  echo 
+  130  ls
+  131  (echo "i am here $(pwd)") && (cd Desktop; echo "Then here $PWD")
+  132  cat > text.txt
+  133  cat text.txt 
+  134  py hello.py
+  135  py hello.py 2>text.txt 
+  136  cat text.txt 
+  137  py hello.py 2>"hey.txt"
+  138  info bash
+  139  echo <(echo "hello world")
+  140  tee
+  141  tee -help
+  142  tee --help
+  143  echo "there are $(ls - l | wc -l ) items here"
+  144  echo "there are $(ls -l | wc -l ) items here"
+  145  var = 123
+  146  var=123
+  147  echo var
+  148  echo $var
+  149  case $var "12" 
+  150  case $var in  12) echo "this 12"; 123) echo "its 123"
+  151  case $var in  12) echo "this 12"; 123) echo "its 123"
+  152  case $var in case $var in  12) echo "this 12"; 123) echo "its 123"
+  153  case "$var" in  12) echo "its 12 man"; 2) echo "its 2 man"
+  154  case "$var" in 12)echo "this is 12";; 123)echo "this is correct";; esac
+  155  for i in {1..10} do; echo "$i"
+  156  for i in {1..10}; do echo "$i"; done
+  157  ls -lrt
+  158  cat hey.txt 
+  159  for i in hey.txt text.txt; do rm -r i; done
+  160  for i in hey.txt text.txt; do rm -r "$i"; done
+  161  ls -lrt
+  162  for i in (ls -l) 
+  163  for i in "(ls -l)" ; do echo "$i"; done
+  164  for i in $(ls -l) ; do echo $i; done
+  165  while [ 1 -eq 1 ]; do echo "forever"; break; done
+  166  while [ 1 -eq 1 ]; do echo "forever"; break; done
+  167  while [ 1 -eq 1 ]; do echo "forever" i=i+1 if [ i -eq 10 ] break; break; done
+  168  while [ 1 -eq 1 ]; do echo "forever" i=i+1 if [ i -eq 10 ] break; done
+  169  function foo() echo "hey hey"
+  170  function foo() {echo "hey hey"}
+  171  function foo() { echo "hey hey" }; 
+  172  foo()
+  173  echo $@
+  174  function this() { echo "Args are this: $@"; echo "and this $1 and $2 too"; return 0; }
+  175  this()
+  176  this
+  177  this fred sally
+  178  echo $@
+  179  bar() { echo "ji wizz"; return 100; }
+  180  bar
+  181  sgsjsk > hey.txt
+  182  cat hey.txt 
+  183  cat > hey.txt
+  184  cat hey.txt 
+  185  sort hey.txt #
+  186  sort hey.txt 
+  187  cat > how.txt
+  188  cat how.txt 
+  189  sort how.txt 
+  190  sed
+  191  sed 's/ow/ex/g' how.txt 
+  192  clear
+  193  sighup
+  194  trap
+  195  trap --help
+  196  trap "echo hello" hello
+  197  sudo
+  198  su
+  199  whoami
+  200  who
+  201  w
+  202  finger
+  203  finger DJNG4
+  204  help
+  205  tree
+  206  apropos
+  207  info
+  208  help return
+  209  help trap
+  210  help if
+  211  py
+  212  python
+  213  python
+  214  #!/bin/bash
+  215    
+  216  cd /workspace/SerenjiDemo-Gitpod-private/ || exit
+  217  get --version
+  218  git --version
+  219  git config --global user.name "Dee Jubi"
+  220  git config --global user.email "djng44@gmail.com"
+  221  get --list
+  222  git --list
+  223  git config --list
+  224  man git
+  225  git --help
+  226  git help
+  227  git man
+  228  man
+  229  pwd
+  230  cd /c/Users/DJNG4/Desktop/gitstuff/
+  231  git init
+  232  ls
+  233  la -a
+  234  ls -a 
+  235  cd .git
+  236  ls -a
+  237  cd ..
+  238  ls
+  239  echo "Hello World" >> README.md
+  240  ls
+  241  ls -lrt
+  242  ll
+  243  git add .
+  244  ls
+  245  git commit -m "first commit"
+  246  git remote add https://github.com/DeeJubi/mystuff.git
+  247  git remote add origin https://github.com/DeeJubi/mystuff.git
+  248  git push -u origin master
+  249  cls
+  250  clear
+  251  git status
+  252  touch testing.txt
+  253  git status
+  254  git add testing.txt 
+  255  git status
+  256  ls
+  257  vi README.md 
+  258  git status
+  259  git add README.md 
+  260  git status
+  261  vi README.md 
+  262  git status
+  263  git add README.md 
+  264  git status
+  265  git status -s
+  266  touch test1.txt
+  267  git status -s
+  268  git status
+  269  git add test1.txt 
+  270  git status
+  271  git status -s
+  272  git diff
+  273  git diff --syaged
+  274  git diff --staged
+  275  vi ml_histogram.py 
+  276  git status -s
+  277  git status
+  278  git diff --staged
+  279  git add ml_histogram.py 
+  280  git status
+  281  git diff --staged
+  282  git commit
+  283  git commit "2nd commit"
+  284  git status
+  285  git commit -a
+  286  git commit -m "2nd commit"
+  287  git status
+  288  git remote add origin https://github.com/DeeJubi/mystuff.git
+  289  git push -u origin master
+  290  git push -u origin master
+  291  git status
+  292  git log
+  293  git log help
+  294  git log --help
+  295  git log --oneline
+  296  it log --stat
+  297  git log --stat
+  298  git log
+  299  ls
+  300  git mv test1.txt test.txt
+  301  git status
+  302  git rm testing.txt 
+  303  ls
+  304  git status
+  305  git rm -cached README.md 
+  306  git rm --cached README.md 
+  307  git status
+  308  git status
+  309  git checkout -b new
+  310  git status
+  311  git stash
+  312  git stash list
+  313  git stash show
+  314  git merge master
+  315  ls
+  316  vi testing.txt
+  317  git status
+  318  git merge master
+  319  git checkout master
+  320  git merge new
+  321  git status
+  322  git add .
+  323  git status
+  324  git commit -m "3rd commit"
+  325  git status
+  326  git checkout new
+  327  git status
+  328* 
+  329  git checkout master
+  330  git push origin
+  331  git reset --soft
+  332  git status
+  333  git log
+  334  git log --oneline 
+  335  git reset --mixed 24106c4
+  336  git status
+  337  git push origin master
+  338  git push origin master
+  339  git push origin master
+  340  git push origin master
+  341  git push origin master
+  342  git push origin
+  343  dddd
+  344  s
+  345  DeeJubi
+  346  cd ..
+  347  git clone https://github.com/DeeJubi/mystuff.git
+  348  cd ..
+  349  ls
+  350  git clone https://github.com/DeeJubi/mystuff.git
+  351  cd mystuff/
+  352  ls
+  353  git status
+  354  git merge 
+  355  cd ..
+  356  pwd
+  357  cd Desktop/ML\ Scripts/
+  358  ls
+  359  ls -a
+  360  git init]
+  361  git init
+  362  ls -la
+  363  git status
+  364  git add.
+  365  git add .
+  366  git status
+  367  git commit -m "ML stuff"
+  368  git status
+  369  git push origin master
+  370  history
+  371  history | grep -push
+  372  history | grep push
+  373  history | grep origin
+  374  history >> git_history.txt
